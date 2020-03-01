@@ -1,0 +1,15 @@
+= Syntax Highlighting For V Language
+Noor Wachid
+
+.V file with dracula colorscheme
+image:https://i.imgur.com/d2EFMuD.jpg[Imgur]
+
+NOTE: It's still in the early development, so don't expect anything will work.
+
+=== Todo
+- Allow nested comment.
+- Note like `TODO:` in comment.
+- Create better string interpolation.
+- Define indent rule. 
+- Error condition.
+- Much more please PR.
