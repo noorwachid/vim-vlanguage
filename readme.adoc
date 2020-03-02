@@ -1,8 +1,8 @@
 = Syntax Highlighting For V Language
 Noor Wachid
 
-.V file with dracula colorscheme
-image:https://i.imgur.com/d2EFMuD.jpg[Imgur]
+image:https://i.imgur.com/d2EFMuD.jpg[Imgur] +
+.V file with [Dracula](https://github.com/dracula/vim) colorscheme
 
 NOTE: It's still in the early development, so don't expect anything will work.
 
@@ -13,3 +13,15 @@ NOTE: It's still in the early development, so don't expect anything will work.
 - Define indent rule. 
 - Error condition.
 - Much more please PR.
+
+=== Install
+
+.Vim-plug
+```sh
+Plug 'wachd/v.vim'
+```
+
+.Vundle
+```sh
+Plugin 'wachd/v.vim'
+```
