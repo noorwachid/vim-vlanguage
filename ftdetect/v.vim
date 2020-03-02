@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.v setl ft=v
+autocmd BufNewFile,BufRead *.v set ft=v
