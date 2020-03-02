@@ -2,28 +2,28 @@ if exists('b:current_syntax')
   finish
 endif
 
-syn sync minlines=200
-syn sync maxlines=500
 
 let b:current_syntax='v'
 
-" Keyword
-syn keyword VCond if else match or
-syn keyword VLoop for in
-syn keyword VStat break continue
-syn keyword VResv 
+syn sync fromstart
+
+syn keyword VCondition if else match or
+syn keyword VLoop      for in
+syn keyword VState     break continue
+syn keyword VReserve
   \ fn return
   \ defer
   \ go goto
   \ module import 
   \ interface type
   \ const mut pub
-syn keyword VBuil 
+syn keyword VBuiltIn 
   \ assert
   \ print println 
-syn keyword VLib os cli time ui rand math json gx gg gl base64
-
-syn keyword VStru struct enum 
+syn keyword VLibrary 
+  \ os cli time ui rand math 
+  \ json gx gg gl base64
+syn keyword VStruct struct enum 
 syn keyword VType
   \ bool
   \ i8 i16 int i64 i128
@@ -34,50 +34,42 @@ syn keyword VType
   \ byteptr voidptr
   \ none
 
-" Operator
-syn match VOper "[-+!|&<>=%*/^:;.,]" skipwhite
-" Function
-syn match VFunc '\w\+\s*('me=e-1,he=e-1
-" Class
-syn match VClas '\u\w\+'
-" Comment
-syn region VComm start='/\*' end='\*/'
-syn match  VCommLine '//.*'
+syn match  VOperator "[-+!|&<>=%*/^:;.,]" skipwhite
+syn match  VFunction '\w\+\s*('me=e-1,he=e-1
+syn match  VClass    '\u\w\+'
 
-" Data Structure
-" - Boolean
-syn keyword VBool true false
-" - Number
-syn match VInt '\d\+'
-syn match VFlo '\d\+\.\d\+'
-" - Character
-syn region VChar start='`' end='`'
-" - String
-syn region VStr start="'" end="'" contains=VStrVar,VStrIntr
-syn region VStrRaw start="r'" end="'" contains=VStrVar,VStrIntr
-syn region VStrIntr start='${' end='}'
-syn match  VStrVar '\$\w\+'
+syn region VComment     start='/\*' end='\*/'
+syn match  VCommentLine '//.*'
 
-" Link
-hi def link VCond Conditional
-hi def link VLoop Repeat
-hi def link VStat Conditional
-hi def link VResv Keyword
-hi def link VBuil Constant
-hi def link VLib  Constant
+syn keyword VBoolean	 true false
+syn match   VInteger	 '\<\d\+'
+syn match   VFloat		 '\<\d\+\.\d\+'
+syn region  VCharacter start='`' end='`'
 
-hi def link VStru Structure
-hi def link VType Type
+syn region  VString             start="'" end="'" contains=VStrVar,VStrIntr
+syn region  VStringRaw          start="r'" end="'" contains=VStrVar,VStrIntr
+syn region  VStringIntrpolation start='${' end='}'
+syn match   VStringVariable     '\$\w\+'
 
-hi def link VOper Operator
-hi def link VFunc Function
-hi def link VClas Function
-hi def link VComm Comment
-hi def link VCommLine Comment
+hi def link VCondition Conditional
+hi def link VLoop      Repeat
+hi def link VState     Conditional
+hi def link VReserve   Keyword
+hi def link VBuiltIn   Constant
+hi def link VLibrary   Constant
 
-hi def link VBool Boolean
-hi def link VInt  Number
-hi def link VFlo  Number
-hi def link Vchar Character
-hi def link VStr  String
-hi def link VStrRaw String
+hi def link VStruct   Structure
+hi def link VType     Type
+
+hi def link VOperator    Operator
+hi def link VFunction    Function
+hi def link VClass       Function
+hi def link VComment     Comment
+hi def link VCommentLine Comment
+
+hi def link VBoolean   Boolean
+hi def link VInteger   Number
+hi def link VFloat     Number
+hi def link VCharacter Character
+hi def link VString    String
+hi def link VStringRaw String
