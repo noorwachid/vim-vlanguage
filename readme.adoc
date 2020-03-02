@@ -2,7 +2,7 @@
 Noor Wachid
 
 image:https://i.imgur.com/d2EFMuD.jpg[Imgur] +
-.V file with [Dracula](https://github.com/dracula/vim) colorscheme
+*V file with https://github.com/dracula/vim[Dracula] colorscheme*
 
 NOTE: It's still in the early development, so don't expect anything will work.
 
