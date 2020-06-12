@@ -14,16 +14,16 @@ syn keyword VReserve
   \ fn return
   \ defer
   \ go goto
-  \ module import 
+  \ module import
   \ interface type
   \ const mut pub
-syn keyword VBuiltIn 
+syn keyword VBuiltIn
   \ assert
-  \ print println 
-syn keyword VLibrary 
-  \ os cli time ui rand math 
+  \ print println
+syn keyword VLibrary
+  \ os cli time ui rand math
   \ json gx gg gl base64
-syn keyword VStruct struct enum 
+syn keyword VStruct struct enum
 syn keyword VType
   \ bool
   \ i8 i16 int i64 i128
@@ -41,9 +41,9 @@ syn match  VClass    '\u\w\+'
 syn region VComment     start='/\*' end='\*/'
 syn match  VCommentLine '//.*'
 
-syn keyword VBoolean	 true false
-syn match   VInteger	 '\<\d\+'
-syn match   VFloat		 '\<\d\+\.\d\+'
+syn keyword VBoolean   true false
+syn match   VInteger   '\<\d\+'
+syn match   VFloat     '\<\d\+\.\d\+'
 syn region  VCharacter start='`' end='`'
 
 syn region  VString             start="'" end="'" contains=VStrVar,VStrIntr
