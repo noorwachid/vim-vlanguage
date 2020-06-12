@@ -46,10 +46,10 @@ syn match   VInteger   '\<\d\+'
 syn match   VFloat     '\<\d\+\.\d\+'
 syn region  VCharacter start='`' end='`'
 
-syn region  VString             start="'" end="'" contains=VStrVar,VStrIntr
-syn region  VStringRaw          start="r'" end="'" contains=VStrVar,VStrIntr
-syn region  VStringIntrpolation start='${' end='}'
-syn match   VStringVariable     '\$\w\+'
+syn region  VString              start="'" end="'" contains=VStringVariable,VStringInterpolation
+syn region  VStringRaw           start="r'" end="'" contains=VStringVariable,VStringInterpolation
+syn region  VStringInterpolation start='${' end='}'
+syn match   VStringVariable      '\$\w\+'
 
 hi def link VCondition Conditional
 hi def link VLoop      Repeat
@@ -67,9 +67,10 @@ hi def link VClass       Function
 hi def link VComment     Comment
 hi def link VCommentLine Comment
 
-hi def link VBoolean   Boolean
-hi def link VInteger   Number
-hi def link VFloat     Number
-hi def link VCharacter Character
-hi def link VString    String
-hi def link VStringRaw String
+hi def link VBoolean             Boolean
+hi def link VInteger             Number
+hi def link VFloat               Number
+hi def link VCharacter           Character
+hi def link VString              String
+hi def link VStringRaw           String
+hi def link VStringInterpolation VStringVariable
