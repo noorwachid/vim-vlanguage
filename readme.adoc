@@ -18,10 +18,10 @@ NOTE: It's still in the early development, so don't expect anything will work.
 
 .Vim-plug
 ```sh
-Plug 'wachd/v.vim'
+Plug 'NoorWachid/VimVLanguage'
 ```
 
 .Vundle
 ```sh
-Plugin 'wachd/v.vim'
+Plugin 'NoorWachid/VimVLanguage'
 ```
