@@ -14,14 +14,3 @@ NOTE: It's still in the early development, so don't expect anything will work.
 - Error condition.
 - Much more please PR.
 
-=== Install
-
-.Vim-plug
-```sh
-Plug 'NoorWachid/VimVLanguage'
-```
-
-.Vundle
-```sh
-Plugin 'NoorWachid/VimVLanguage'
-```
